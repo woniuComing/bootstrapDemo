@@ -1,11 +1,4 @@
-/*
- * @Author: zhengwei
- * @Date:   2016-07-13 14:53:22
- * @Last Modified by:   xuruihong
- * @Last Modified time: 2016-07-15 21:39:45
- */
 
-'use strict';
 $(function() {
     $('[data-toggle="tooltip"]').tooltip();
     //1.首先需求是大屏幕的时候显示的是大图 然后用背景图的方式显示
@@ -36,6 +29,8 @@ $(function() {
                 $item.css('background-image', 'url(' + imgSrc + ')');
                 $item.html("");
             });
+            $(".navbar-brand i").removeClass('small');
+            $("#about .item img").removeClass('little');
         } else if (windowWidth <= 768) {
             //说明是小图
             //设置小图路径 是设置图片标签
@@ -45,6 +40,8 @@ $(function() {
                 $item.html('<img src="' + imgSrc + '" alt="" />');
                 $item.css('background-image', "");
             });
+            $(".navbar-brand i").addClass('small');
+            $("#about .item img").addClass('little');
         }
         var tabs = $('#products .nav-tabs');
         var lis = $('#products .nav-tabs li');
@@ -53,6 +50,7 @@ $(function() {
             width += $(el).width();
         });
         tabs.css('width', width);
+
     }).trigger('resize');
     //1.添加滑动事件
     //2.判断滑动的方向如果是从左往右就切换到上一张 .carousel('prev')
