@@ -63,11 +63,11 @@ $(function() {
     var carousel = $('#slide .carousel');
     slide.addEventListener('touchstart', function(e) {
         startX = e.touches[0].clientX;
-        console.log(1);
+        // console.log(1);
     });
     slide.addEventListener('touchend', function(e) {
         endX = e.changedTouches[0].clientX;
-        console.log(endX - startX);
+        // console.log(endX - startX);
         /*if (endX - startX > 0) {
             //从左往右滑动
             //调用Bootstrap提供的切换上一张图片的方法 里面的参数就是一个'prev'字符串

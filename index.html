@@ -26,6 +26,9 @@
 </head>
 
 <body>
+    <div class="load">
+        <img src="img/ring.gif" height="194" width="194" alt="">
+    </div>
     <!-- 插入音乐 -->
     <audio src="img/纯音乐-神秘园之歌.mp3" autoplay></audio>
     <!-- 头部区域 -->
@@ -678,6 +681,14 @@
     <script src="lib/bootstrap/js/bootstrap.js"></script>
     <!-- 先引入第三方框架再引入自己写的JS -->
     <script src="js/index.js"></script>
+    <script>
+        $(function(){
+        $(window).on("load",function(){
+        $(".load").css("display","none");
+        $("body").css("overflow","visible");
+    });
+})
+    </script>
 </body>
 
 </html>
